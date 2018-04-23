@@ -16,8 +16,6 @@ import { DocenteComponent } from './components/docente/docente.component';
 //Institucion
 import { InstitucionComponent } from './components/institucion/institucion.component';
 
-import { DocenteInstitucionComponent } from './components/institucion/docente-institucion/docente-institucion.component';
-import { EstudianteInstitucionComponent } from './components/institucion/estudiante-institucion/estudiante-institucion.component';
 import { InformacionInstitucionComponent } from './components/institucion/informacion-institucion/informacion-institucion.component';
 import { InicioInstitucionComponent } from './components/institucion/inicio-institucion/inicio-institucion.component';
 import { MensajesInstitucionComponent } from './components/institucion/mensajes-institucion/mensajes-institucion.component';
@@ -28,11 +26,10 @@ import { ApoderadoParticularComponent } from './components/institucion/mensajes-
 import { InicioEstudianteComponent } from './components/institucion/estudiante-institucion/inicio-estudiante/inicio-estudiante.component';
 import { AsignarEstudianteComponent } from './components/institucion/estudiante-institucion/asignar-estudiante/asignar-estudiante.component';
 import { AgregarEstudianteComponent } from './components/institucion/estudiante-institucion/agregar-estudiante/agregar-estudiante.component';
-import { InicioCursoComponent } from './components/institucion/curso-institucion/inicio-curso/inicio-curso.component';
 import { CrearCursoComponent } from './components/institucion/curso-institucion/crear-curso/crear-curso.component';
-import { CursoInstitucionComponent } from './components/institucion/curso-institucion/curso-institucion.component';
 import { HomeDocenteInstitucionComponent } from './components/institucion/docente-institucion/home-docente-institucion/home-docente-institucion.component';
 import { AgregarDocenteInstitucionComponent } from './components/institucion/docente-institucion/agregar-docente-institucion/agregar-docente-institucion.component';
+import { InicioCursoComponent } from './components/institucion/curso-institucion/inicio-curso/inicio-curso.component';
 
 
 //Psicologo
@@ -56,8 +53,6 @@ import { SistemaComponent } from './components/sistema/sistema.component';
     PsicologoComponent,
     PsicopedaComponent,
     SistemaComponent,
-    DocenteInstitucionComponent,
-    EstudianteInstitucionComponent,
     InformacionInstitucionComponent,
     InicioInstitucionComponent,
     MensajesInstitucionComponent,
@@ -68,33 +63,37 @@ import { SistemaComponent } from './components/sistema/sistema.component';
     InicioEstudianteComponent,
     AsignarEstudianteComponent,
     AgregarEstudianteComponent,
-    InicioCursoComponent,
     CrearCursoComponent,
-    CursoInstitucionComponent,
     HomeDocenteInstitucionComponent,
-    AgregarDocenteInstitucionComponent
+    AgregarDocenteInstitucionComponent,
+    InicioCursoComponent
   ],
   imports: [
     BrowserModule,
     
     //routing
     RouterModule.forRoot([
+      {path: '', component: AgregarDocenteInstitucionComponent},
       //Sistema
       {path: 'Sistema', component: SistemaComponent},
 
       //Administrador Institucion
       {path: 'Institucion', component: InstitucionComponent ,
       children:[
-        {path: '', component: InicioInstitucionComponent},
+      {path: '', component: InicioInstitucionComponent},
 
-      {path: 'Docentes', component: DocenteInstitucionComponent,
-        children:[
-          {path: '', component: HomeDocenteInstitucionComponent},
-          {path: 'Docentes/Nuevo', component: AgregarDocenteInstitucionComponent}
-        ]},
+      {path: 'Docentes/Listado', component: HomeDocenteInstitucionComponent},
+      {path: 'Docentes/Nuevo', component: AgregarDocenteInstitucionComponent},
 
-      {path: 'Cursos', component: CursoInstitucionComponent},
-      {path: 'Alumnos', component: AsignarEstudianteComponent},
+      {path: 'Cursos/Listado', component: InicioCursoComponent},
+      {path: 'Cursos/Nuevo', component: CrearCursoComponent},
+
+
+      {path: 'Estudiante/Listado', component: InicioEstudianteComponent},
+      {path: 'Estudiante/Nuevo', component: AgregarEstudianteComponent},
+
+
+
       {path: 'Informacion', component: InformacionInstitucionComponent},
       {path: 'Comunicados', component: MensajesInstitucionComponent}
       ]
