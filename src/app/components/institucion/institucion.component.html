@@ -1,39 +1,30 @@
-<nav>
-  <div>
-    <div>
-      <ul>
-          <a [routerLink]="['/Institucion/']">Inicio</a>
-            <a [routerLink]="['/Institucion/Docentes']">Cuentas de Doocente</a>
-            <a [routerLink]="['/Institucion/Informacion']">Informacion Institución</a>
-            <a [routerLink]="['/Institucion/Alumnos']">Cuentas de estudiantes</a>
-            <a [routerLink]="['/Institucion/Cursos']">Cursos</a>
-            <a [routerLink]="['/Institucion/Comunicados']">Enviar Comunicado</a>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!--
+Administrador de Establecimiento
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="navbar-brand" [routerLink]="['/Institucion/']">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="navbar-brand" [routerLink]="['/Institucion/Docentes']">Cuentas de Docente</a>
+    </li>
+    <li class="nav-item">
+        <a class="navbar-brand" [routerLink]="['/Institucion/Informacion']">Informacion Institución</a>
+    </li>
+    <li class="nav-item">
+        <a class="navbar-brand" [routerLink]="['/Institucion/Alumnos']">Cuentas de estudiantes</a>
+    </li>
+    <li class="nav-item">
+        <a class="navbar-brand" [routerLink]="['/Institucion/Cursos']">Cursos</a>
+    </li>
+    <li class="nav-item">
+        <a class="navbar-brand" [routerLink]="['/Institucion/Comunicados']">Enviar Comunicado</a>
+    </li>
+    <li class="nav-item">
+        <a href="#"><i class="fas fa-sign-out-alt"></i>Log Out</a>
+    </li>
+ </ul>
+
+
 <div class=card>
-    <div class="car-body">
-          <div *ngIf="this.accion===0">
-              <app-inicio-institucion></app-inicio-institucion>
-          </div>
-          <div *ngIf="this.accion===1">
-              <app-docente-institucion></app-docente-institucion>
-          </div>
-          <div *ngIf="this.accion===2">
-              <app-informacion-institucion></app-informacion-institucion>
-          </div>
-          <div *ngIf="this.accion===3">
-              <app-estudiante-institucion></app-estudiante-institucion>
-          </div>
-          <div *ngIf="this.accion===4">
-            <app-mensajes-institucion></app-mensajes-institucion>
-        </div>
-        <div *ngIf="this.accion===5">
-            <app-curso-institucion></app-curso-institucion>
-        </div>
-    </div>
-  </div>
--->
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+</div>
+  

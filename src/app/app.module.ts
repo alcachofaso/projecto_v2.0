@@ -31,6 +31,9 @@ import { AgregarEstudianteComponent } from './components/institucion/estudiante-
 import { InicioCursoComponent } from './components/institucion/curso-institucion/inicio-curso/inicio-curso.component';
 import { CrearCursoComponent } from './components/institucion/curso-institucion/crear-curso/crear-curso.component';
 import { CursoInstitucionComponent } from './components/institucion/curso-institucion/curso-institucion.component';
+import { HomeDocenteInstitucionComponent } from './components/institucion/docente-institucion/home-docente-institucion/home-docente-institucion.component';
+import { AgregarDocenteInstitucionComponent } from './components/institucion/docente-institucion/agregar-docente-institucion/agregar-docente-institucion.component';
+
 
 //Psicologo
 import { PsicologoComponent } from './components/psicologo/psicologo.component';
@@ -42,10 +45,6 @@ import { PsicopedaComponent } from './components/psicopeda/psicopeda.component';
 
 //Sistema
 import { SistemaComponent } from './components/sistema/sistema.component';
-
-
-
-
 
 
 
@@ -72,6 +71,8 @@ import { SistemaComponent } from './components/sistema/sistema.component';
     InicioCursoComponent,
     CrearCursoComponent,
     CursoInstitucionComponent,
+    HomeDocenteInstitucionComponent,
+    AgregarDocenteInstitucionComponent
   ],
   imports: [
     BrowserModule,
@@ -85,34 +86,26 @@ import { SistemaComponent } from './components/sistema/sistema.component';
       {path: 'Institucion', component: InstitucionComponent ,
       children:[
         {path: '', component: InicioInstitucionComponent},
-        {path: 'Docentes', component: DocenteInstitucionComponent},
-        {path: 'Cursos', component: CursoInstitucionComponent},
-        {path: 'Alumnos', component: AsignarEstudianteComponent},
-        {path: 'Informacion', component: InformacionInstitucionComponent},
-        {path: 'Comunicados', component: MensajesInstitucionComponent}
+
+      {path: 'Docentes', component: DocenteInstitucionComponent,
+        children:[
+          {path: '', component: HomeDocenteInstitucionComponent},
+          {path: 'Docentes/Nuevo', component: AgregarDocenteInstitucionComponent}
+        ]},
+
+      {path: 'Cursos', component: CursoInstitucionComponent},
+      {path: 'Alumnos', component: AsignarEstudianteComponent},
+      {path: 'Informacion', component: InformacionInstitucionComponent},
+      {path: 'Comunicados', component: MensajesInstitucionComponent}
       ]
     },
-      /*
-      //Docente - Administrador Institucion
-      
-
-      //Curso - Administrador Institucion
-      {path: 'Insitucion/', component: InstitucionComponent},
-
-      //Estudiantes - Administrador Institucion
-      {path: 'Insitucion', component: InstitucionComponent},
-
-      //Informacion - Administrador Institucion
-      {path: 'Insitucion', component: InstitucionComponent},
-
-      //Mensajes - Administrador Institucion
-      {path: 'Insitucion', component: InstitucionComponent},
-*/
       //Psicopedagogo
       {path: 'Psicopedagogo', component: PsicopedaComponent},
 
       //Docente
-      {path: 'Docente', component: DocenteComponent},
+      {path: 'Docentes', component: DocenteComponent
+    
+    },
 
       //Psicologo
       {path: 'Psicologo', component: PsicologoComponent}
