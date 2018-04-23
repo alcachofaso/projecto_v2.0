@@ -1,0 +1,29 @@
+<nav>
+  <div>
+    <div>
+      <ul>
+          <a (click)=opcion(0)>Comunidad Escolar</a>
+            <a (click)=opcion(1)>Nivel Especifico</a>
+            <a (click)=opcion(2)>Curso Especifico</a>
+            <a (click)=opcion(3)>Apoderado Especifico</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class=card>
+    <div class="car-body">
+          <div *ngIf="this.accion===0">
+              <app-comunidad-completa></app-comunidad-completa>
+          </div>
+          <div *ngIf="this.accion===1">
+              <app-solo-nivel></app-solo-nivel>
+          </div>
+          <div *ngIf="this.accion===2">
+              <app-solo-curso></app-solo-curso>
+          </div>
+          <div *ngIf="this.accion===3">
+              <app-apoderado-particular></app-apoderado-particular>
+          </div>
+    </div>
+  </div>

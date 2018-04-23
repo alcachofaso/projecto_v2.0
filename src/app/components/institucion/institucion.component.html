@@ -1,3 +1,39 @@
-<p>
-  institucion works!
-</p>
+<nav>
+  <div>
+    <div>
+      <ul>
+          <a [routerLink]="['/Institucion/']">Inicio</a>
+            <a [routerLink]="['/Institucion/Docentes']">Cuentas de Doocente</a>
+            <a [routerLink]="['/Institucion/Informacion']">Informacion Institución</a>
+            <a [routerLink]="['/Institucion/Alumnos']">Cuentas de estudiantes</a>
+            <a [routerLink]="['/Institucion/Cursos']">Cursos</a>
+            <a [routerLink]="['/Institucion/Comunicados']">Enviar Comunicado</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--
+<div class=card>
+    <div class="car-body">
+          <div *ngIf="this.accion===0">
+              <app-inicio-institucion></app-inicio-institucion>
+          </div>
+          <div *ngIf="this.accion===1">
+              <app-docente-institucion></app-docente-institucion>
+          </div>
+          <div *ngIf="this.accion===2">
+              <app-informacion-institucion></app-informacion-institucion>
+          </div>
+          <div *ngIf="this.accion===3">
+              <app-estudiante-institucion></app-estudiante-institucion>
+          </div>
+          <div *ngIf="this.accion===4">
+            <app-mensajes-institucion></app-mensajes-institucion>
+        </div>
+        <div *ngIf="this.accion===5">
+            <app-curso-institucion></app-curso-institucion>
+        </div>
+    </div>
+  </div>
+-->
+  <router-outlet></router-outlet>
