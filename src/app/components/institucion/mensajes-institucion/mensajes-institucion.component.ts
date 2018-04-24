@@ -5,19 +5,37 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './mensajes-institucion.component.html',
   styleUrls: ['./mensajes-institucion.component.css']
 })
+
+
 export class MensajesInstitucionComponent implements OnInit {
-  accion:number;
 
-  constructor() {
-    this.accion=0;
-   }
+  mensajes:mensaje[];
 
-  opcion(_opcion)
-  {
-    if(_opcion!=this.accion)
-      this.accion=_opcion;
+  men:mensaje;
+
+  constructor(){
+    this.men.titulo="Suspención de Clases";
+    this.men.fecha="12/03/2018";
+    this.men.contenido="Por motivos de fuerza mayor el dia 13 de marzo no habran actividades academicas.";
+    this.men.destinatario="Comunidad";
+    this.mensajes.push(this.men);
+    this.men=null;
+    this.men.titulo="colecta benefica";
+    this.men.fecha="08/03/2018";
+    this.men.contenido="Colecta en ayuda de alguien";
+    this.men.destinatario="8° basico";
+    this.mensajes.push(this.men);
   }
+
   ngOnInit() {
+    
   }
+  
 
+}
+class mensaje{
+  titulo:string;
+  fecha:string;
+  contenido:string;
+  destinatario:string
 }

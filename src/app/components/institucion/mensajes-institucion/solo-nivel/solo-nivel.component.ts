@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SoloNivelComponent implements OnInit {
 
-  constructor() { }
+  niveles:string[];
+
+  constructor() { 
+    this.niveles=["1° Basico","2° Basico","3° Basico","4° Basico","5° Basico","6° Basico","7° Basico","8° Basico"];
+
+  }
 
   ngOnInit() {
   }

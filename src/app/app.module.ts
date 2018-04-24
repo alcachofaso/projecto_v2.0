@@ -73,7 +73,7 @@ import { SistemaComponent } from './components/sistema/sistema.component';
     
     //routing
     RouterModule.forRoot([
-      {path: '', component: AgregarDocenteInstitucionComponent},
+      {path: '', component: AppComponent},
       //Sistema
       {path: 'Sistema', component: SistemaComponent},
 
@@ -95,9 +95,18 @@ import { SistemaComponent } from './components/sistema/sistema.component';
 
 
       {path: 'Informacion', component: InformacionInstitucionComponent},
-      {path: 'Comunicados', component: MensajesInstitucionComponent}
+
+      {path: 'Comunicados', component: MensajesInstitucionComponent},
+      {path: 'Comunicados/Curso', component: SoloCursoComponent},
+      {path: 'Comunicados/Nivel', component: SoloNivelComponent},
+      {path: 'Comunicados/comunidad', component: ComunidadCompletaComponent},
+      {path: 'Comunicados/apoderado', component: ApoderadoParticularComponent},
+
+
       ]
     },
+
+
       //Psicopedagogo
       {path: 'Psicopedagogo', component: PsicopedaComponent},
 

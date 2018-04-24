@@ -1,3 +1,37 @@
-<p>
-  home-docente-institucion works!
-</p>
+<div class=card>
+<h2>Listado de Profesores</h2>
+
+<li *ngFor="let profe of profesores">
+{{profe}}  <i class="fas fa-edit"></i> <i class="far fa-trash-alt"></i>
+</li>
+<br><br><br>
+
+</div>
+<div class=card>
+  <h3>Editar Información Profesor</h3>
+<form>
+    <div class="form-group">
+      <label >Nombre Profesor</label>
+      <input type="text" class="form-control" id="" placeholder="Nombre de Profesor" value="Mella Ibarra, Josefa Thiare">
+    </div>
+    <div class="form-group">
+        <label >Asignatura Impartida</label>
+        <select class="form-control" id="">
+          <option *ngFor="let asignatura of asignaturas">{{asignatura}}</option>
+        </select>
+      </div>
+  
+  <div class="form-group">
+      <label for="exampleSelect2">Cursos asignados</label>
+      <select multiple class="form-control" id="exampleSelect2">
+        <option selected>8° Basico A</option>
+        <option>8° Basico B</option>
+        <option selected>8° Basico C</option>
+        <option>8° Basico D</option>
+        <option selected>8° Basico E</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary"><i class="far fa-check-circle" ></i> Actualizar</button>
+      <button type="reset" class="btn btn-se"><i class="fas fa-ban"></i> Cancelar</button>
+      </form>
+</div>

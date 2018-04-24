@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./solo-curso.component.css']
 })
 export class SoloCursoComponent implements OnInit {
-
-  constructor() { }
+  niveles:string[];
+  identificadores:string[];
+  constructor() {
+    this.niveles=["1° Basico","2° Basico","3° Basico","4° Basico","5° Basico","6° Basico","7° Basico","8° Basico"];
+    this.identificadores=["A","B","C","D",];
+   }
 
   ngOnInit() {
   }
