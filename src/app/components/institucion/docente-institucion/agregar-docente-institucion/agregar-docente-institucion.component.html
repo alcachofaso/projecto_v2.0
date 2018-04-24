@@ -1,0 +1,79 @@
+<h2>Agregar Nuveo Profesor</h2>
+
+<div class=card>
+<form>
+    <div class="form-group">
+        <label class="col-2 col-form-label">Nombre Profesor</label>
+        <div class="col-10">
+          <input class="form-control" type="text"  id="" placeholder="Nombre de Profesor">
+        </div>
+      </div>
+      <div class="form-group">
+          <label class="col-2 col-form-label" >Asignatura Impartida</label>
+          <div class="col-10">
+          <select class="form-control" id="">
+            <option *ngFor="let asignatura of asignaturas">{{asignatura}}</option>
+          </select>
+        </div>
+        </div>
+        <div class="form-group">
+            <label class="col-2 col-form-label" >Cursos a Impartir</label>
+            <div class="col-10">
+            <select multiple class="form-control" id="">
+              <option *ngFor="let curso of cursos">{{curso}}</option>
+            </select>
+          </div>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="far fa-address-card"></i> Agregar Asignatura</button>
+<div class=card>
+
+
+    <h4>Asignaturas Impartidas</h4>
+
+
+<li>
+    <label class="col-2 col-form-label" >Asignatura</label>
+    <label class="col-2 col-form-label" >Artes Plasticas</label><br>
+    <label class="col-2 col-form-label" >Cursos</label>
+<ul>
+    <li>
+        2° Basico A
+      </li>
+      <li>
+        2° Basico B
+      </li>
+      <li>
+        2° Basico C
+      </li>
+      <li>
+        4° Basico D
+      </li>
+</ul>
+</li>
+<li>
+    <label class="col-2 col-form-label" >Asignatura</label>
+    <label class="col-2 col-form-label" >Musica</label><br>
+    <label class="col-2 col-form-label" >Cursos</label>
+<ul>
+    <li>
+        3° Basico A
+      </li>
+      <li>
+        3° Basico B
+      </li>
+      <li>
+        5° Basico C
+      </li>
+      <li>
+        8° Basico D
+      </li>
+</ul>
+</li>
+</div>
+<button type="submit" class="btn btn-primary"><i class="far fa-check-circle" ></i> Agregar Docente</button>
+<button type="reset" class="btn btn-se"><i class="fas fa-ban"></i> Reiniciar</button>
+
+</form>
+
+
+</div>
