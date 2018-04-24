@@ -9,12 +9,14 @@ export class InicioCursoComponent implements OnInit {
 
   cursos:curso;
   arrayCurso:curso[];
-
+  
   constructor() {
+    console.log(this.cursos);
     this.cursos.nombre="1° Basico";
     this.cursos.identificador="A";
     this.cursos.encargado="Juan Soto Garcia";
-    this.cursos.alumnos=['Abarca Alvarado, MARTINA RENATA',
+    this.cursos.alumnos=[
+    'Abarca Alvarado, MARTINA RENATA',
     "Abarca Baeza, SOFIA MAGDALENA",
     "Aguilar Calderon, FLORENCIA ISABELLA",
     "Barra Carrasco, VALENTINA MATILDA",

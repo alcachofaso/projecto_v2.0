@@ -2,13 +2,13 @@
 
 <div class="list-group">
         <a  class="list-group-item list-group-item-action flex-column align-items-start active"
-        *ngFor="let mensa of mensajes">
+        *ngFor="let aux of mensajes">
           <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">{{mensa.titulo}}</h5>
-            <small>{{mensa.fecha}}</small>
+            <h5 class="mb-1">{{aux.titulo}}</h5>
+            <small>{{aux.fecha}}</small>
           </div>
-          <p class="mb-1">{{mensa.contenido}}</p>
-          <small>{{mensa.destinatario}}</small>
+          <p class="mb-1">{{aux.contenido}}</p>
+          <small>{{aux.destinatario}}</small>
         </a>
 
 

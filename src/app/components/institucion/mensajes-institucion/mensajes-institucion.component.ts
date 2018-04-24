@@ -9,22 +9,21 @@ import { Component, OnInit } from '@angular/core';
 
 export class MensajesInstitucionComponent implements OnInit {
 
-  mensajes:mensaje[];
-
-  men:mensaje;
+  public mensajes;
 
   constructor(){
-    this.men.titulo="Suspención de Clases";
-    this.men.fecha="12/03/2018";
-    this.men.contenido="Por motivos de fuerza mayor el dia 13 de marzo no habran actividades academicas.";
-    this.men.destinatario="Comunidad";
-    this.mensajes.push(this.men);
-    this.men=null;
-    this.men.titulo="colecta benefica";
-    this.men.fecha="08/03/2018";
-    this.men.contenido="Colecta en ayuda de alguien";
-    this.men.destinatario="8° basico";
-    this.mensajes.push(this.men);
+    this.mensajes = [{
+        titulo: "Suspencion de Clases",
+        fecha: "12/03/2018",
+        contenido: "Por motivos de fuerza mayor el dia 13 de marzo no habran actividades academicas.",
+        destinatario: "Comunidad",
+      },
+      {
+        titulo: "Colecta Benefica",
+        fecha: "08/03/2018",
+        contenido: "Colecta en ayuda de alguien.",
+        destinatario: "8° basico"
+      }];
   }
 
   ngOnInit() {
@@ -32,10 +31,4 @@ export class MensajesInstitucionComponent implements OnInit {
   }
   
 
-}
-class mensaje{
-  titulo:string;
-  fecha:string;
-  contenido:string;
-  destinatario:string
 }
