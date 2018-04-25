@@ -1,7 +1,9 @@
-<h2>Mensajes con Apoderados</h2>
 
-<h5>Mensajes recividos</h5>
 <div class="list-group">
+    <div class="col-10">
+        <h2>Mensajes con Apoderados</h2>
+
+        <h5>Mensajes recividos</h5>
     <a  class="list-group-item  flex-column align-items-start"
     *ngFor="let mensaje of mensajes">
       <div class="d-flex w-100 justify-content-between">
@@ -12,8 +14,6 @@
             <i class="fas fa-edit "></i> Responder
           </button>
         </small>
-
-
       </div>
       <p class="mb-1">{{mensaje.content}}</p>
       <small>{{mensaje.curso}} {{mensaje.fecha}}</small>
@@ -47,4 +47,5 @@
           </div>
         </div>
     </a>
+    </div>
   </div>

@@ -153,7 +153,12 @@ import { ContactoComponent } from './components/home/contacto/contacto.component
 
 
       //Psicopedagogo
-      {path: 'Psicopedagogo', component: PsicopedaComponent},
+      {path: 'Psicopedagogo', component: PsicopedaComponent,
+      children:[
+        {path: '', component: MensajesPsicopedaComponent},
+        {path: 'Mensajes', component: EnvioPsicopedaComponent},
+        {path: 'Mensajes/Nuevo', component: NuevoPsicopedaComponent}
+      ]},
 
       //Docente
       {path: 'Docentes', component: DocenteComponent,

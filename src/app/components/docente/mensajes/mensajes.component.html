@@ -1,22 +1,21 @@
-<h2>Mensajes con Apoderados</h2>
 
-<h5>Mensajes recividos</h5>
 <div class="list-group">
-    <a  class="list-group-item  flex-column align-items-start"
-    *ngFor="let mensaje of mensajes">
+    <div class="col-10">
+      <h2>Mensajes con Apoderados</h2>
+      <h5>Mensajes recividos</h5>
+      <a class="list-group-item  flex-column align-items-start" *ngFor="let mensaje of mensajes">
       <div class="d-flex w-100 justify-content-between">
-          <h6 class="mb-1">{{mensaje.origen}}</h6>
-
+        <h6 class="mb-1">{{mensaje.origen}}</h6>
         <small *ngIf="mensaje.respondido ==='Contestar'">
           <button class="badge badge-primary badge-pill" data-toggle="modal" data-target="#respuesta">
             <i class="fas fa-edit "></i> Responder
           </button>
         </small>
-
-
-      </div>
       <p class="mb-1">{{mensaje.content}}</p>
-      <small>{{mensaje.fecha}}</small>
+      <small>
+        {{mensaje.fecha}}
+      </small>
+    </div>
 
       <div class="modal fade" id="respuesta" tabindex="-1" role="dialog" aria-labelledby="respuesta" aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -47,4 +46,5 @@
           </div>
         </div>
     </a>
+  </div>
   </div>
