@@ -1,0 +1,14 @@
+<div class="list-group">
+  <div class="col-10">
+        <h2>Mensajes Enviados</h2>
+        <a  class="list-group-item flex-column align-items-start"
+        *ngFor="let aux of mensajes">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{aux.origen}} {{aux.curso}}</h5>
+            <small>{{aux.fecha}}</small>
+          </div>
+          <p class="mb-1">{{aux.content}}</p>
+          <small>{{aux.respondido}}</small> 
+        </a>
+  </div>
+</div>

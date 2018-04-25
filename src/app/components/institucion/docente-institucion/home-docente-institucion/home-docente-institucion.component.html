@@ -1,21 +1,44 @@
-<div class=card>
+<div class="list-group">
+    <div class="col-10">
 <h2>Listado de Profesores</h2>
 
-<li *ngFor="let profe of profesores">
-{{profe}}  <i class="fas fa-edit"></i> <i class="far fa-trash-alt"></i>
-</li>
+
+<ul class="list-group">  
+
+          <li *ngFor="let profe of profesores" class="list-group-item d-flex justify-content-between align-items-center">
+            {{profe}}
+            <div>
+            <span class="badge badge-primary badge-pill">
+              <i class="fas fa-edit "></i> Editar
+            </span>
+            <span class="badge badge-danger badge-pill">
+                <i class="far fa-trash-alt"></i> Eliminar
+            </span>
+            <span class="badge badge-warning badge-pill">
+                <i class="fas fa-sync"></i> Reiniciar Contraseña
+            </span>
+          </div>
+</ul>
+
 <br><br><br>
 
-</div>
 <div class=card>
   <h3>Editar Información Profesor</h3>
 <form>
     <div class="form-group">
-      <label >Nombre Profesor</label>
-      <input type="text" class="form-control" id="" placeholder="Nombre de Profesor" value="Mella Ibarra, Josefa Thiare">
+      <label class="col-2 col-form-label">Nombre Profesor</label>
+      <div class="col-10">
+        <input type="text" class="form-control" id="" placeholder="Nombre de Profesor" value="Mella Ibarra, Josefa Thiare">
+      </div>
     </div>
     <div class="form-group">
-        <label >Asignatura Impartida</label>
+      <label class="col-2 col-form-label">E-mail</label>
+    </div>
+      <div class="col-10">
+        <input class="form-control" type="text"  id="" placeholder="Email de profesor" value="mella.josefa@emprender.cl">
+      </div>
+    <div class="form-group">
+        <label class="col-2 col-form-label">Asignatura Impartida</label>
         <select class="form-control" id="">
           <option *ngFor="let asignatura of asignaturas">{{asignatura}}</option>
         </select>
@@ -33,5 +56,7 @@
     </div>
     <button type="submit" class="btn btn-primary"><i class="far fa-check-circle" ></i> Actualizar</button>
       <button type="reset" class="btn btn-se"><i class="fas fa-ban"></i> Cancelar</button>
-      </form>
+ </form>
+</div>
+</div>
 </div>

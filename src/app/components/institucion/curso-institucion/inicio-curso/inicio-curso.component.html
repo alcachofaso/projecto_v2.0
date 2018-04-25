@@ -1,2 +1,23 @@
+
+<div class="list-group">
+        <div class="col-10">
 <h2>Listado de Cursos activos</h2>
 
+        <ul *ngFor="let curso of cursos">
+            <div class="card">
+                <div class='car-body'>
+                    <div>
+                        <h5>{{curso.nivel}}  {{curso.identificador}}</h5>
+                    </div>  
+                    <div>
+                        <h6>Profesor Jefe : {{curso.pJefe}}</h6>
+                    </div> 
+                    <div>
+                        <h6>Cantidad Alumnos : {{curso.cAlumnos}}</h6>
+                    </div>
+                    <button class="badge badge-primary"> <i class="fas fa-edit "></i> Editar</button>
+                    <button class="badge badge-danger"> <i class="far fa-trash-alt"></i> Eliminar</button>
+                </div>
+            </div>
+        </ul>
+</div></div>

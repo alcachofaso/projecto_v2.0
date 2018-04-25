@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PsicologoComponent implements OnInit {
 
-  constructor() { }
-
+  constructor() {
+   }
   ngOnInit() {
   }
 

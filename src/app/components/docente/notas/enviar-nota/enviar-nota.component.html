@@ -1,0 +1,59 @@
+
+
+<form>
+    <div class="form-group">
+        <div class="col-10">
+            <h2>Enviar Reporte de Notas</h2>
+        <label for="exampleSelect1 col-2 col-form-label">Curso</label>
+        <select class="form-control" id="">
+          <option *ngFor="let curso of cursos">
+            {{curso}}
+          </option>
+        </select>
+      
+      <div class="form-group">
+          <label for="exampleSelect1 col-2 col-form-label">Asignatura</label>
+          <select class="form-control" id="">
+            <option *ngFor="let asignatura of asignaturas">
+              {{asignatura}}
+            </option>
+          </select>
+        </div>
+        <label class="col-2 col-form-label">Nombre Evaluación</label>
+          <input class="form-control" type="text"  id="" placeholder="Prueba 1, Control, etc.">
+        <!--
+        -->
+        <div class="form-group">
+            <h4>Agregar Desde Archivo</h4>
+  
+            <div class="col-10">
+            <input type="file" class="form-control-file" id="exampleInputFile"  accept=".xls, .xlsx">
+          
+            <small id="fileHelp" class="form-text text-muted">Archivos .xls o .xlsx</small>
+           </div>
+        </div>
+        <h4>Agregar Manualmente</h4>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Nota</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let alumno of alumnos">
+                <th scope="row">{{alumno}}</th>
+                <td><input type="number" max="7" min="2" step=".1"></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+     
+
+      <button type="submit" class="btn btn-primary"><i class="far fa-check-circle" ></i> Enviar Reporte</button>
+<button type="reset" class="btn btn-se"><i class="fas fa-ban"></i> Cancelar</button>
+</div>
+</div>
+</form>

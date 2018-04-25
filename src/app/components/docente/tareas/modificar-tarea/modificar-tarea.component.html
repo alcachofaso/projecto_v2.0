@@ -1,0 +1,59 @@
+
+<form action="">
+    <div class="form-group">
+        <div class="col-10">
+            <h2>Editar Tareas Enviadas</h2>
+        <label for="exampleSelect1 col-2 col-form-label">Curso</label>
+        <select class="form-control" id="cursoSelect">
+          <option *ngFor="let curso of cursos">
+            {{curso}}
+          </option>
+        </select>
+      <div class="form-group">
+          <label for="exampleSelect1 col-2 col-form-label">Asignatura</label>
+          <select class="form-control" id="asignaturaSelect">
+            <option *ngFor="let asignatura of asignaturas">
+              {{asignatura}}
+            </option>
+          </select>
+        </div>
+        <h5>Listado de Tareas Enviadas</h5>
+        <div class="list-group">
+            <a  class="list-group-item  flex-column align-items-start"
+            *ngFor="let tarea of tareas">
+              <div class="d-flex w-100 justify-content-between">
+                  <h6 class="mb-1">Descripción</h6>
+                <small>
+                  <button class="badge badge-primary badge-pill">
+                    <i class="fas fa-edit "></i> Modificar
+                  </button>
+                </small>
+              </div>
+              <p class="mb-1">{{tarea.descripcion}}</p>
+              <small>{{tarea.arcivo}}</small>
+            </a>
+          </div>
+
+<br><br>
+
+<h5>Editar Tarea</h5>
+          <div class="form-group">
+              <label for="exampleTextarea">Descripción de Tarea</label>
+              <textarea class="form-control" id="descripcionTarea" placeholder="Agrege una descripción para la tarea" rows="3" >multiplicaciones de fracciones</textarea>
+            </div>
+          <!--
+        -->
+        <div class="form-group">
+            <h4>Agregar Desde Archivo</h4>
+    
+            <div class="col-10">
+            <input type="file" class="form-control-file" id="tareaSeleccionada"  accept=".pdf, .doc, .docx">
+          
+            <small id="fileHelp" class="form-text text-muted">Archivos .pdf, .doc o .docx</small>
+           </div>
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="far fa-check-circle" ></i>Actualizar Tarea</button>
+    <button type="reset" class="btn btn-se"><i class="fas fa-ban"></i> Cancelar</button>
+    </div>
+    </div>
+      </form>
