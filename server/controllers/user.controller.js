@@ -18,7 +18,7 @@ function loginUser(req, res) {
     });
 }
 function getUsers(req, res) {
-    User.find({}).exec((err, users) => {
+    User.find().exec((err, users) => {
         if(err){
             return res.status(500).send({message: "error servidor"});
         } else {

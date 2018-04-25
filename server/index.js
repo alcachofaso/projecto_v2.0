@@ -9,7 +9,7 @@ var app = require('./app')
 
 // Levanta el Servidor Node
 mongoose.Promise  = global.Promise;
-mongoose.connect('mongodb://localhost:27017/tata')
+mongoose.connect('mongodb://localhost:27017/config')
 	.then(() => {
 		console.log("Conexión con MongoDB establecida");
 		
