@@ -1,0 +1,51 @@
+<h2>
+  Notas Enviadas
+</h2>
+
+<form>
+    <div class="form-group">
+        <div class="col-10">
+        <label for="exampleSelect1">Curso</label>
+        <select class="form-control" id="">
+          <option *ngFor="let curso of cursos">
+            {{curso}}
+          </option>
+        </select>
+      <div class="form-group">
+          <label for="exampleSelect1">Asignatura</label>
+          <select class="form-control" id="">
+            <option *ngFor="let asignatura of asignaturas">
+              {{asignatura}}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleSelect1">Evaluación</label>
+            <select class="form-control" id="">
+              <option *ngFor="let nombre of nombreEv">
+                {{nombre}}
+              </option>
+            </select>
+          </div>
+        <!--
+        -->
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Nota</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let alumno of alumnos">
+                <th scope="row">{{alumno.nombre}}</th>
+                <td><input type="number" max="7.0" min="2.0" value={{alumno.nota}} step=".1"></td>
+              </tr>
+            </tbody>
+          </table>
+
+      <button type="submit" class="btn btn-primary"><i class="far fa-check-circle" ></i>Actualizar Notas</button>
+<button type="reset" class="btn btn-se"><i class="fas fa-ban"></i> Cancelar</button>
+</div>
+</div>
+</form>

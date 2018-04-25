@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {curso, alumno} from "../../mock";
 @Component({
   selector: 'app-inicio-curso',
   templateUrl: './inicio-curso.component.html',
@@ -7,44 +6,42 @@ import {curso, alumno} from "../../mock";
 })
 export class InicioCursoComponent implements OnInit {
 
-  cursos:curso;
-  arrayCurso:curso[];
+  public cursos:any;
   
   constructor() {
-    console.log(this.cursos);
-    this.cursos.nombre="1° Basico";
-    this.cursos.identificador="A";
-    this.cursos.encargado="Juan Soto Garcia";
-    this.cursos.alumnos=[
-    'Abarca Alvarado, MARTINA RENATA',
-    "Abarca Baeza, SOFIA MAGDALENA",
-    "Aguilar Calderon, FLORENCIA ISABELLA",
-    "Barra Carrasco, VALENTINA MATILDA",
-    "Bravo Chavez, VICENTE LUCAS",
-    "Cabrera	Contreras, MARTIN ALONSO",
-    "Canales	Cruz, MATIAS BASTIAN",
-    "Castillo Diaz, JOAQUIN JUAN",
-    "Cid	Farias,	CATALINA MIA",
-    "Contreras Flores, FERNANDA GABRIELA",
-    "Cortes Gajardo, CONSTANZA BARBARA",
-    "Espinoza Garrido, JAVIERA JOSEFINA",
-    "Fuenzalida Guajardo, MAITE MATILDE",
-    "Garcia Gutierrez, MARIA ANAHIS",
-    "Gonzales Henriquez,	FRANCISCA PASCAL",
-    "Guzman Hidalgo,	AGUSTINA PAULA",
-    "Mella Ibarra, JOSEFA THIARE",
-    "Moya Jara, AMANDA RAYEN",
-    "Perez Lara, CAMILA GENESIS",
-    "Quiroz Leon, DANIEL	IGNACIO",
-    "Rivera Lopez, LUIS FRANCISCO",
-    "Soto Mardones, GASPAR RENATO",
-    "Ulloa Medina, ANGEL	MAXIMO",
-    "Valdivia Godoy,	FERNANDO MATEO",
-    "Varas Gonzalez,	CARLOS JAVIER",
-    "Venegas	Gonzalez, EMILIO DANIEL",
-    "Vidal Guerrero,	FRANCO LUIS",
-    "Villegas Hernandez, PIA PIA"];
-    this.arrayCurso.push(this.cursos);
+    this.cursos=[{
+        nivel:'1° Basico ',
+        identificador:'A',
+        pJefe:'Ulloa Medina, Angel  Maximo',
+        cAlumnos:'15',},
+        {nivel:'1° Basico ',
+        identificador:'B',
+        pJefe:'Moya Jara, Amanda Rayen',
+        cAlumnos:'20',},
+        {nivel:'1° Basico ',
+        identificador:'C',
+        pJefe:'Venegas  Gonzalez, Emilio Daniel ',
+        cAlumnos:'18',},
+        {nivel:'1° Basico ',
+        identificador:'D',
+        pJefe:'Perez Lara, Camila Genesis',
+        cAlumnos:'22',},
+        {nivel:'2° Basico ',
+        identificador:'A',
+        pJefe:'Valdivia Godoy,  Fernando Mateo',
+        cAlumnos:'25',},
+        {nivel:'2° Basico ',
+        identificador:'B',
+        pJefe:'Espinoza Garrido, Javiera Josefina',
+        cAlumnos:'23',},
+        {nivel:'2° Basico ',
+        identificador:'C',
+        pJefe:'Garcia Gutierrez, Maria Anahis',
+        cAlumnos:'19',},
+        {nivel:'2° Basico ',
+        identificador:'D',
+        pJefe:'Castillo Diaz, Joaquin Juan',
+        cAlumnos:'20',}];
    }
 
   ngOnInit() {

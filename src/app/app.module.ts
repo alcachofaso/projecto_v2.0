@@ -12,6 +12,15 @@ import { RouterModule } from '@angular/router';
 
 //Docentes
 import { DocenteComponent } from './components/docente/docente.component';
+import { AtrasosComponent } from './components/docente/atrasos/atrasos.component';
+import { EnviarNotaComponent } from './components/docente/notas/enviar-nota/enviar-nota.component';
+import { EditarNotaComponent } from './components/docente/notas/editar-nota/editar-nota.component';
+import { EnviarTareaComponent } from './components/docente/tareas/enviar-tarea/enviar-tarea.component';
+import { ModificarTareaComponent } from './components/docente/tareas/modificar-tarea/modificar-tarea.component';
+import { HistorialComponent } from './components/docente/comunicado/historial/historial.component';
+import { CursoComunicadoComponent } from './components/docente/comunicado/curso-comunicado/curso-comunicado.component';
+import { ApoderadoComunicadoComponent } from './components/docente/comunicado/apoderado-comunicado/apoderado-comunicado.component';
+import { MensajesComponent } from './components/docente/mensajes/mensajes.component';
 
 //Institucion
 import { InstitucionComponent } from './components/institucion/institucion.component';
@@ -42,13 +51,30 @@ import { PsicopedaComponent } from './components/psicopeda/psicopeda.component';
 
 //Sistema
 import { SistemaComponent } from './components/sistema/sistema.component';
+import { InicioDocenteComponent } from './components/docente/inicio-docente/inicio-docente.component';
+import { HomeComponent } from './components/home/home/home.component';
+import { QuienesSomosComponent } from './components/home/quienes-somos/quienes-somos.component';
+import { ContactoComponent } from './components/home/contacto/contacto.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    //Docentes//
     DocenteComponent,
+    AtrasosComponent,
+    EnviarNotaComponent,
+    EditarNotaComponent,
+    EnviarTareaComponent,
+    ModificarTareaComponent,
+    HistorialComponent,
+    CursoComunicadoComponent,
+    ApoderadoComunicadoComponent,
+    MensajesComponent,
+    InicioDocenteComponent,
+    //-----------//
+
     InstitucionComponent,
     PsicologoComponent,
     PsicopedaComponent,
@@ -66,14 +92,27 @@ import { SistemaComponent } from './components/sistema/sistema.component';
     CrearCursoComponent,
     HomeDocenteInstitucionComponent,
     AgregarDocenteInstitucionComponent,
-    InicioCursoComponent
+    InicioCursoComponent,
+    HomeComponent,
+    QuienesSomosComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
     
     //routing
     RouterModule.forRoot([
-      {path: '', component: AppComponent},
+      {path: '', component: AppComponent,
+      children:[
+        {path: '', component: HomeComponent},
+        {path: 'QuienesSomos', component: QuienesSomosComponent},
+        {path: 'Contacto', component: ContactoComponent},
+      ]},
+
+
+
+
+
       //Sistema
       {path: 'Sistema', component: SistemaComponent},
 
@@ -81,28 +120,18 @@ import { SistemaComponent } from './components/sistema/sistema.component';
       {path: 'Institucion', component: InstitucionComponent ,
       children:[
       {path: '', component: InicioInstitucionComponent},
-
       {path: 'Docentes/Listado', component: HomeDocenteInstitucionComponent},
       {path: 'Docentes/Nuevo', component: AgregarDocenteInstitucionComponent},
-
       {path: 'Cursos/Listado', component: InicioCursoComponent},
       {path: 'Cursos/Nuevo', component: CrearCursoComponent},
-
-
       {path: 'Estudiante/Listado', component: InicioEstudianteComponent},
       {path: 'Estudiante/Nuevo', component: AgregarEstudianteComponent},
-
-
-
       {path: 'Informacion', component: InformacionInstitucionComponent},
-
       {path: 'Comunicados', component: MensajesInstitucionComponent},
       {path: 'Comunicados/Curso', component: SoloCursoComponent},
       {path: 'Comunicados/Nivel', component: SoloNivelComponent},
       {path: 'Comunicados/comunidad', component: ComunidadCompletaComponent},
       {path: 'Comunicados/apoderado', component: ApoderadoParticularComponent},
-
-
       ]
     },
 
@@ -111,9 +140,19 @@ import { SistemaComponent } from './components/sistema/sistema.component';
       {path: 'Psicopedagogo', component: PsicopedaComponent},
 
       //Docente
-      {path: 'Docentes', component: DocenteComponent
-    
-    },
+      {path: 'Docentes', component: DocenteComponent,
+      children:[
+        {path: '', component: InicioDocenteComponent},
+        {path: 'Notas/Envio', component: EnviarNotaComponent},
+        {path: 'Notas/Modificar', component: EditarNotaComponent},
+        {path: 'Tareas/Envio', component: EnviarTareaComponent},
+        {path: 'Tareas/Modificar', component: ModificarTareaComponent},
+        {path: 'Comunicados/Historial', component: HistorialComponent},
+        {path: 'Comunicados/Curso', component: CursoComunicadoComponent},
+        {path: 'Comunicados/Apoderado', component: ApoderadoComunicadoComponent},
+        {path: 'Mensajes', component: MensajesComponent},
+        {path: 'Atrasos', component: AtrasosComponent}
+      ]},
 
       //Psicologo
       {path: 'Psicologo', component: PsicologoComponent}
