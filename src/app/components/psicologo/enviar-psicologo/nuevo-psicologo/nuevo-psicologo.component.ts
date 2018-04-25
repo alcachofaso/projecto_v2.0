@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-atrasos',
-  templateUrl: './atrasos.component.html',
-  styleUrls: ['./atrasos.component.css']
+  selector: 'app-nuevo-psicologo',
+  templateUrl: './nuevo-psicologo.component.html',
+  styleUrls: ['./nuevo-psicologo.component.css']
 })
-export class AtrasosComponent implements OnInit {
-lista:any;
-  constructor() { 
+export class NuevoPsicologoComponent implements OnInit {
+  lista:string[];
+  niveles:string[];
+  identificadores:string[];
+  constructor() {
     this.lista=['Abarca Alvarado, MARTINA RENATA',
     "Abarca Baeza, SOFIA MAGDALENA",
     "Aguilar Calderon, FLORENCIA ISABELLA",
@@ -15,7 +17,7 @@ lista:any;
     "Bravo Chavez, VICENTE LUCAS",
     "Cabrera	Contreras, MARTIN ALONSO",
     "Canales	Cruz, MATIAS BASTIAN",
-    "Castillo Diaz, JOAQUIN JUAN", 
+    "Castillo Diaz, JOAQUIN JUAN",
     "Cid	Farias,	CATALINA MIA",
     "Contreras Flores, FERNANDA GABRIELA",
     "Cortes Gajardo, CONSTANZA BARBARA",
@@ -36,14 +38,10 @@ lista:any;
     "Venegas	Gonzalez, EMILIO DANIEL",
     "Vidal Guerrero,	FRANCO LUIS",
     "Villegas Hernandez, PIA PIA"];
-  }
+    this.niveles=["1° Basico","2° Basico","3° Basico","4° Basico","5° Basico","6° Basico","7° Basico","8° Basico"];
+    this.identificadores=["A","B","C","D",]; }
 
   ngOnInit() {
-  }
-
-  aviso(nombre)
-  {
-    alert("Se a enviado un reporte de inasistencia a "+ nombre);
   }
 
 }

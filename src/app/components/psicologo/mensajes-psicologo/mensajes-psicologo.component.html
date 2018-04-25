@@ -16,13 +16,13 @@
 
       </div>
       <p class="mb-1">{{mensaje.content}}</p>
-      <small>{{mensaje.fecha}}</small>
+      <small>{{mensaje.curso}} {{mensaje.fecha}}</small>
 
       <div class="modal fade" id="respuesta" tabindex="-1" role="dialog" aria-labelledby="respuesta" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="">{{mensaje.origen}}</h5>
+                <h5 class="modal-title" id="">{{mensaje.origen}} {{mensaje.curso}}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>

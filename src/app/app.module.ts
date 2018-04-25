@@ -43,10 +43,16 @@ import { InicioCursoComponent } from './components/institucion/curso-institucion
 
 //Psicologo
 import { PsicologoComponent } from './components/psicologo/psicologo.component';
+import { EnviarPsicologoComponent } from './components/psicologo/enviar-psicologo/enviar-psicologo.component';
+import { MensajesPsicologoComponent } from './components/psicologo/mensajes-psicologo/mensajes-psicologo.component';
+import { NuevoPsicologoComponent } from './components/psicologo/enviar-psicologo/nuevo-psicologo/nuevo-psicologo.component';
 
 
 //PSicopedagogo
 import { PsicopedaComponent } from './components/psicopeda/psicopeda.component';
+import { MensajesPsicopedaComponent } from './components/psicopeda/mensajes-psicopeda/mensajes-psicopeda.component';
+import { EnvioPsicopedaComponent } from './components/psicopeda/envio-psicopeda/envio-psicopeda.component';
+import { NuevoPsicopedaComponent } from './components/psicopeda/envio-psicopeda/nuevo-psicopeda/nuevo-psicopeda.component';
 
 
 //Sistema
@@ -74,10 +80,20 @@ import { ContactoComponent } from './components/home/contacto/contacto.component
     MensajesComponent,
     InicioDocenteComponent,
     //-----------//
+    //psicologo//
+    EnviarPsicologoComponent,
+    MensajesPsicologoComponent,
+    PsicologoComponent,
+    NuevoPsicologoComponent,
+    
+    //psicopedagogo//
+    MensajesPsicopedaComponent,
+    EnvioPsicopedaComponent,
+    PsicopedaComponent,
+    NuevoPsicopedaComponent,
+    //-----------//
 
     InstitucionComponent,
-    PsicologoComponent,
-    PsicopedaComponent,
     SistemaComponent,
     InformacionInstitucionComponent,
     InicioInstitucionComponent,
@@ -155,7 +171,12 @@ import { ContactoComponent } from './components/home/contacto/contacto.component
       ]},
 
       //Psicologo
-      {path: 'Psicologo', component: PsicologoComponent}
+      {path: 'Psicologo', component: PsicologoComponent,
+      children:[
+        {path: '', component: MensajesPsicologoComponent},
+        {path: 'Mensajes', component: EnviarPsicologoComponent},
+        {path: 'Mensajes/Nuevo', component: NuevoPsicologoComponent}
+      ]}
      /* {path: "**", redirectTo: "/"},
       {path: "", redirectTo: "/"}*/
     ])
