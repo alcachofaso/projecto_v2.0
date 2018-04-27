@@ -1,0 +1,3 @@
+.modal, .face, .modal-body, .modal-footer{
+    z-index: 100px !important;
+}
