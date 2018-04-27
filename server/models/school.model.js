@@ -11,6 +11,9 @@ var SchoolSchema = Schema({
         psychologist: [{ type: Schema.ObjectId, ref: 'User' }],
         psychopedagogue: [{ type: Schema.ObjectId, ref: 'User' }]
     }],
+    students: [{
+       studentId: [{ type: Schema.ObjectId, ref: 'Student' }]
+    }],
     grades: [{ type: Schema.ObjectId, ref: 'Grade' }],
     logo: String
 });

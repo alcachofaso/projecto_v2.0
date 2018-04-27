@@ -10,7 +10,7 @@ var GradeSchema = Schema({
         teacherId: [{ type: Schema.ObjectId, ref: 'User' }]
     }],
     students: [{ 
-       studentId: [{ type: Schema.ObjectId, ref: 'User' }]
+       studentId: [{ type: Schema.ObjectId, ref: 'Student' }]
     }],
     subjects: [{ 
         subjectId: [{ type: Schema.ObjectId, ref: 'Subject' }]
